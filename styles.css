@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left, #141c2f, #1f2a48);
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #121829;
+}
+
+header i {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1890ff;
+}
+
+.fa-bars {
+    display: none !important;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 16px;
+    color: #1890ff;
+}
+
+nav a:hover {
+    color: cyan;
+}
+
+
+.section1 {
+    text-align: left;
+    padding: 70px;
+}
+
+.section1 h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+.section1 p {
+    margin-bottom: 24px;
+    font-size: 16px;
+    color: #8e95a9;
+}
+
+span {
+    display: block;
+}
+
+.search-bar {
+    width: 26vw;
+    padding: 10px 0 10px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1f2a48;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.search-bar input {
+    width: 85%;
+    background: none;
+    border: none;
+    padding: 0 0 0 20px;
+    font-size: 20px;
+    color: white;
+}
+
+
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    padding: 70px;
+}
+
+.movie {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.movie:hover {
+    transform: scale(1.1);
+}
+
+
+.movie img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.movie .fa-star {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #f0c040;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.movie .fa-heart {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #f0c040;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.movie p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.movie .fa-tag {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #f0c040;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+
+@media (max-width: 450px) {
+    header nav {
+        display: none !important;
+    }
+
+    .fa-bars {
+        display: block !important;
+    }
+
+    .search-bar {
+        width: 60vw;
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
